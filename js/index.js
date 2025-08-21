@@ -27,6 +27,13 @@ function navigate(fileUrl) {
     $("#wrapper").load(history.state.stateFileUrl);
 }
 
+function navigateLink(target){
+    if (target == "li")
+        window.open("https://www.linkedin.com/in/john-paul-smithdeal-b50293102", "_blank").focus();
+    else if (target == "gh")
+        window.open("https://github.com/jsmithdeal", "_blank").focus();
+}
+
 window.onpopstate = function (e) {
     sessionStorage.setItem("refreshUrl", e.state.stateFileUrl);
     $("#wrapper").load(e.state.stateFileUrl);

@@ -1,0 +1,21 @@
+h1 {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 12rem;
+    font-style: normal;
+    color: #48295e;
+    text-shadow: 3px 3px 5px #2b2b2b;
+}
+
+.polygon {
+    background-image: url(../images/staunton2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%);
+    padding: 0;
+}
+
+.link {
+    cursor: pointer;
+}
