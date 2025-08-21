@@ -103,7 +103,7 @@ h1 {
         padding: 1rem;
     }
 
-    .container {
+    #wrapper {
         min-width: 100%;
         padding: 2rem;
     }
