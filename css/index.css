@@ -1,20 +1,27 @@
 html, body {
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
     font-style: normal;
+    color: #2b2b2b;
+    font-size: larger;
+}
+
+h1 {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 12rem;
+    font-style: normal;
+    color: #48295e;
+    text-shadow: 3px 3px 5px #2b2b2b;
 }
 
 .navbar {
     top: 0 !important;
     left: 0 !important;
     position: sticky;
-    background-color: #998d82;
-    font-size: large;
-}
-
-.nav-item {
-    
+    background-color: #000000;
+    font-size: large ;
 }
 
 .nav-item:hover{
@@ -44,7 +51,37 @@ html, body {
     margin: 2rem;
 }
 
+.page-footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    overflow-x: hidden;
+}
+
+.polygon {
+    background-image: url(../images/staunton2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%);
+    padding: 0;
+}
+
+.overlay {
+    background-color: rgba(72, 41, 94, .5);
+    z-index: 999;
+}
+
 @media screen and (max-width: 991px) {
+    p {
+        font-size: 2.5em;
+        padding-left: 1rem;
+    }
+
+    h1 {
+        font-size: 16rem;
+    }
+
     .navbar {
         padding: 0 !important;
         font-size: 3rem;
@@ -64,5 +101,14 @@ html, body {
 
     .nav-item {
         padding: 1rem;
+    }
+
+    .container {
+        min-width: 100%;
+        padding: 2rem;
+    }
+
+    .links-row {
+        padding-right: 5rem;
     }
 }
