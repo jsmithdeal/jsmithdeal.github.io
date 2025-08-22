@@ -15,9 +15,13 @@ $(document).ready(function(){
         else
             icon.css("background-image", "url(images/hamburger.svg)");
     });
+
+    if (!$("navbar-toggler").hasClass("collapsed"))
+        $("navbar-toggler").addClass("collapsed");
 });
 
 function navigate(fileUrl) {
+    var nav = $("#navbarNav");
     sessionStorage.setItem("refreshUrl", fileUrl);
 
     if (history.state == null || fileUrl != history.state.stateFileUrl)
@@ -25,6 +29,12 @@ function navigate(fileUrl) {
     
     $("#wrapper").html("");
     $("#wrapper").load(history.state.stateFileUrl);
+
+    if (nav.hasClass("show"))
+    {
+        nav.removeClass("show");
+        $(".navbar-toggler-icon").css("background-image", "url(images/hamburger.svg)");
+    }
 }
 
 function navigateLink(target){
