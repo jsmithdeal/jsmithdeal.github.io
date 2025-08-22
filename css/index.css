@@ -12,12 +12,17 @@ body {
     min-height: 100dvh !important;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 .navbar {
     top: 0 !important;
     left: 0 !important;
     position: sticky;
     background-color: #180526;
-    font-size: large ;
+    font-size: large;
+    z-index: 999 !important;
 }
 
 .nav-item:hover{
@@ -32,12 +37,7 @@ body {
     font-weight: 400;
 }
 
-.nav-link:hover {
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.nav-link:focus {
+.nav-link:focus, .nav-link:hover {
     color: #ffffff;
 }
 
@@ -64,11 +64,7 @@ body {
     color: #ffffff;
 }
 
-.navbar-brand:hover {
-    color: #ffffff;
-}
-
-.navbar-brand:active {
+.navbar-brand:hover, .navbar-brand:active {
     color: #ffffff;
 }
 
@@ -83,12 +79,7 @@ body {
 
 @media screen and (max-width: 991px) {
     p {
-        font-size: 2.5em;
-        padding-left: 1rem;
-    }
-
-    h1 {
-        font-size: 16rem;
+        font-size: 2.5rem;
     }
 
     .navbar {
@@ -114,12 +105,5 @@ body {
 
     #wrapper {
         min-width: 100%;
-        padding: 2rem;
-    }
-}
-
-@media screen and (max-width: 1199px) {
-    h1 {
-        font-size: 10rem !important;
     }
 }
