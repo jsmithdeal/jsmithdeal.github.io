@@ -31,7 +31,7 @@ function navigateLink(target){
     if (target == "li")
         window.open("https://www.linkedin.com/in/john-paul-smithdeal-b50293102", "_blank").focus();
     else if (target == "gh")
-        window.open("https://github.com/jsmithdeal", "_blank").focus();
+        window.open("https://github.com/jsmithdeal/jsmithdeal.github.io", "_blank").focus();
 }
 
 window.onpopstate = function (e) {
