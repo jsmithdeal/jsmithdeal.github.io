@@ -8,6 +8,16 @@ h1 {
     text-shadow: 3px 3px 5px #2b2b2b;
 }
 
+button {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+}
+
 .polygon {
     background-image: url(../images/staunton2.jpg);
     background-repeat: no-repeat;
@@ -18,4 +28,26 @@ h1 {
 
 .link {
     cursor: pointer;
+}
+
+.linkedin {
+    background-image: url(../images/linkedin.png);
+}
+
+.github {
+    background-image: url(../images/github-2.png);
+}
+
+@media screen and (max-width: 991px) {
+    button {
+        width: 6rem;
+    }
+
+    .btn-row {
+        justify-content: start !important;
+    }
+
+    .btn-col {
+        width: 16% !important;
+    }
 }
