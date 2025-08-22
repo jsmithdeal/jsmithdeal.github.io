@@ -95,8 +95,9 @@ a:hover {
     }
 
     .navbar-nav {
-        justify-content: center;
+        justify-content: start;
         align-items: center;
+        height: 100vh;
     }
 
     .nav-item {
