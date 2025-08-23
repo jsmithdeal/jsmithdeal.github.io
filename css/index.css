@@ -4,6 +4,7 @@ html, body {
     font-style:normal;
     color: #2b2b2b;
     font-size: larger;
+    overflow-x: hidden;
 }
 
 body {
