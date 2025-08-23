@@ -45,7 +45,6 @@ a:hover {
     background-image: url(../images/hamburger.svg);
     width: 5rem;
     height: 5rem;
-    margin: 2rem;
 }
 
 .page-footer {
@@ -57,11 +56,10 @@ a:hover {
 
 .navbar-brand {
     font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
     font-weight: 800;
     font-size: 3rem;
-    font-style: normal;
     color: #ffffff;
+    padding-left: 2rem;
 }
 
 .navbar-brand:hover, .navbar-brand:active {
@@ -92,6 +90,10 @@ a:hover {
         width: 4rem;
         height: 4rem;
         margin: 2rem;
+    }
+
+    .navbar-brand {
+        font-size: 4rem;
     }
 
     .navbar-nav {
