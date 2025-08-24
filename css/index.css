@@ -1,16 +1,22 @@
 html, body {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style:normal;
-    color: #2b2b2b;
-    font-size: larger;
     overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh !important;
+}
+
+.github, .linkedin {
+    width: clamp(2rem, 3rem, 4rem);
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
 }
 
 a:hover {
@@ -21,25 +27,18 @@ a:hover {
     top: 0 !important;
     left: 0 !important;
     position: sticky;
-    background-color: #180526;
+    background-color: #738575;
     font-size: large;
     z-index: 999 !important;
 }
 
-.nav-item:hover{
-    text-decoration: underline;
-    text-decoration-color: #ffffff;
-    text-decoration-thickness: .15rem;
-    text-underline-offset: 5px;
-}
-
 .nav-link {
-    color: #ffffff;
+    color: #e6ecfc;
     font-weight: 400;
 }
 
 .nav-link:focus, .nav-link:hover {
-    color: #ffffff;
+    color: #374366;
 }
 
 .navbar-toggler-icon {
@@ -55,21 +54,12 @@ a:hover {
     overflow-x: hidden;
 }
 
-.navbar-brand {
-    font-family: "Caveat", cursive;
-    font-weight: 800;
-    font-size: 3rem;
-    color: #ffffff;
-    padding-left: 2rem;
+.linkedin {
+    background-image: url(../images/linkedin-2.png);
 }
 
-.navbar-brand:hover, .navbar-brand:active {
-    color: #ffffff;
-}
-
-.overlay {
-    background-color: rgba(0, 0, 0, .3);
-    z-index: 999;
+.github {
+    background-image: url(../images/github-4.png);
 }
 
 #wrapper {
@@ -77,12 +67,7 @@ a:hover {
 }
 
 @media screen and (max-width: 991px) {
-    p {
-        font-size: 2.5rem;
-    }
-
     .navbar {
-        padding: 0 !important;
         font-size: 3rem;
     }
 
@@ -91,10 +76,6 @@ a:hover {
         width: 4rem;
         height: 4rem;
         margin: 2rem;
-    }
-
-    .navbar-brand {
-        font-size: 4rem;
     }
 
     .navbar-nav {
@@ -109,5 +90,14 @@ a:hover {
 
     #wrapper {
         min-width: 100%;
+    }
+
+    .github, .linkedin {
+        width: 8rem !important;
+        margin-right: 1rem;
+    }
+
+    .container {
+        max-width: 100%;
     }
 }

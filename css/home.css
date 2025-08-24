@@ -1,40 +1,51 @@
-h1 {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-size: clamp(6rem, 8.5rem, 12rem);
-    color: #48295e;
-    text-shadow: 3px 3px 5px #2b2b2b;
+body, html {
+    background-color: #738575;
 }
 
-button {
-    width: clamp(2rem, 3rem, 4rem);
-    aspect-ratio: 1/1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    background-color: transparent;
+.container {
+    margin-top: 10rem;
 }
 
-.polygon {
-    background-image: url(../images/staunton2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 20% 50%);
-    padding: 0;
+.blurb {
+    color: #000000;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
-.linkedin {
-    background-image: url(../images/linkedin.png);
+.blue-period {
+    color: #374366;
 }
 
-.github {
-    background-image: url(../images/github-2.png);
+.typewriter {
+    white-space: nowrap;           /* prevent wrapping */
+    overflow: hidden;              /* hide overflow */
+    border-right: 3px solid #000000; /* cursor effect */
+    width: 0;                      /* start hidden */
+    font-size: 12rem;
+    letter-spacing: .75rem;
+    color: #e6ecfc;
+    font-weight: 700;
+    animation: typing 1s steps(10, end) forwards, /* typing letters */
+                blink 0.7s step-end infinite;      /* blinking cursor */
+}
+
+/* Typewriter animation */
+@keyframes typing {
+    from { width: 0; }
+    to   { width: 5ch; }  /* number of characters */
+}
+
+/* Cursor blink */
+@keyframes blink {
+    50% { border-right-color: transparent; }
 }
 
 @media screen and (max-width: 991px) {
-    button {
-        width: 6rem;
+    .blurb {
+        font-size: 3.5rem;
+    }
+
+    .container {
+        max-width: 850px !important;
     }
 }

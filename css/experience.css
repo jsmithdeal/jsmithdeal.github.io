@@ -1,71 +1,92 @@
 h1 {
-    font-family: "Lato", sans-serif;
-    font-weight: 500;
+    color: #374366;
+    font-size: 4rem;
 }
 
-.skill-list li {
-    list-style-image: url(../images/bullet.svg);
-}
-
-.xp-line {
-    border: none;           
-    border-top: 2px solid #000;
-    width: 100%;            
-    margin: 0;
+.title, .list-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #374366;
 }
 
 .title {
-    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.list-title {
+    margin-top: 0;
 }
 
 .even-section {
-    background-color: #ededed;
+    background-color: #e6ecfc;
+}
+
+.skill-list {
+    font-size: 1.1rem;
+    margin-left: 2rem;
 }
 
 #nfcu-logo {
-    max-width: 9rem;
-}
-
-#dccu-logo {
-    max-width: 16rem;
-}
-
-#jmu-logo {
-    max-width: 15rem;
-}
-
-#brcc-logo {
     max-width: 12rem;
 }
 
+#dccu-logo {
+    max-width: 20rem;
+}
+
+#jmu-logo {
+    max-width: 18rem;
+}
+
+#brcc-logo {
+    max-width: 16rem;
+}
+
 @media screen and (max-width: 991px) {
-    #nfcu-logo {
-        max-width: 15rem;
+    h1 {
+        font-size: 6rem;
+        padding-left: 5rem;
     }
 
-    #dccu-logo {
-        min-width: 28rem;
-    }
-
-    #jmu-logo {
-        max-width: 24rem;
-    }
-
-    #brcc-logo {
-        max-width: 20rem;
-    }
-
-    .title {
+    p {
         font-size: 2.5rem;
     }
 
-    .skill-list li {
-        font-size: 2.5rem
+    .mobile-padding {
+        padding: 5rem;
     }
 
-    h1 {
-        font-size: 5rem;
-        margin-left: 3rem;
+    .title, .list-title {
+        font-weight: bold;
+        font-size: 3rem;
+        color: #374366;
+    }
+
+    .title {
+        margin-top: 3rem;
+    }
+
+    .list-title {
         margin-top: 2rem;
+    }
+
+    .skill-list li {
+        font-size: 2.5rem;
+    }
+
+    #nfcu-logo {
+        max-width: 18rem;
+    }
+
+    #dccu-logo {
+        min-width: 34rem;
+    }
+
+    #jmu-logo {
+        max-width: 30rem;
+    }
+
+    #brcc-logo {
+        max-width: 25rem;
     }
 }
