@@ -41,6 +41,14 @@ a:hover {
     color: #374366;
 }
 
+.download:focus {
+    color: #e6ecfc;
+}
+
+.active {
+    color: #374366;
+}
+
 .navbar-toggler-icon {
     background-image: url(../images/hamburger.svg);
     width: 5rem;
