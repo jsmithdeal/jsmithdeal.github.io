@@ -1,0 +1,36 @@
+h1 {
+    color: #374366;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.project {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #374366;
+}
+
+.opening-blurb {
+    background-color: #e6ecfc;
+}
+
+@media screen and (max-width: 991px) {
+    p {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+        padding-top: 5rem;
+    }
+
+    .mobile-padding {
+        padding-bottom: 5rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .project {
+        font-size: 3rem;
+    }
+}
