@@ -1,5 +1,4 @@
 html, body {
-    overflow-x: hidden;
     font-family: "Poppins", sans-serif;
 }
 
@@ -10,7 +9,7 @@ body {
 }
 
 .github, .linkedin {
-    width: clamp(2rem, 3rem, 4rem);
+    width: 3rem;
     aspect-ratio: 1/1;
     background-size: cover;
     background-position: center;

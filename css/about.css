@@ -1,0 +1,40 @@
+.blurb {
+    background-color: #e6ecfc;
+}
+
+.hello {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #374366;
+}
+
+.emphasis {
+    font-weight: bold;
+    color: #374366;
+}
+
+#me {
+    width: 20rem;
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    p {
+        font-size: 2.5rem;
+    }
+
+    .mobile-padding {
+        padding: 5rem;
+    }
+
+    .hello {
+        font-weight: bold;
+        font-size: 3rem;
+        color: #374366;
+    }
+
+    #me {
+        width: 25rem;
+        border-radius: 100%;
+    }
+}
