@@ -20,8 +20,10 @@ $(document).ready(function(){
         $("navbar-toggler").addClass("collapsed");
 });
 
-function navigate(fileUrl) {
+async function navigate(fileUrl) {
     var nav = $("#navbarNav");
+    var fileName = fileUrl.replace("html/", "").replace(".html", "");
+
     sessionStorage.setItem("refreshUrl", fileUrl);
 
     if (history.state == null || fileUrl != history.state.stateFileUrl)
@@ -36,7 +38,25 @@ function navigate(fileUrl) {
         $(".navbar-toggler-icon").css("background-image", "url(images/hamburger.svg)");
     }
 
-    updateActive(fileUrl);
+    await track(fileName);
+    updateActive(fileName);
+}
+
+async function track(fileName){
+    if (document.cookie.indexOf(`${fileName}=true`) == -1){
+        try {
+            const client = new Counter({
+                workspace: "test-workspace-jp",
+                debug: false
+            });
+
+            await client.up('test-counter-jp');
+            document.cookie = `${fileName}=true; expires=Fri, 31 Dec 2038 12:00:00 UTC`;
+        }
+        catch (error){
+            console.log(error);
+        }
+    }
 }
 
 function navigateLink(target){
@@ -46,8 +66,7 @@ function navigateLink(target){
         window.open("https://github.com/jsmithdeal/jsmithdeal.github.io", "_blank").focus();
 }
 
-function updateActive(fileUrl) {
-    var fileName = fileUrl.replace("html/", "").replace(".html", "");
+function updateActive(fileName) {
     var targetLink = $(`.nav-item .${fileName}`);
 
     $(".nav-link").removeClass("active");
