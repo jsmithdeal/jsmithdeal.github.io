@@ -38,7 +38,7 @@ function navigate(fileUrl) {
         $(".navbar-toggler-icon").css("background-image", "url(images/hamburger.svg)");
     }
 
-    track(fileName);
+    //track(fileName); // DO NOT CHECK IN - commented locally so I don't mess with the visitor count while testing
     updateActive(fileName);
 }
 
