@@ -121,10 +121,17 @@ function getFileFromUrl(fileUrl){
 //Handles loading correct html on back/forward click
 window.onpopstate = function (e) {
     try {
-        var fileName = getFileFromUrl(e.state.stateFileUrl);
+        var fileUrl;
+        var fileName;
 
-        sessionStorage.setItem("refreshUrl", e.state.stateFileUrl);
-        $("#wrapper").load(e.state.stateFileUrl);
+        if (e.state == null)
+            fileUrl = "html/home.html";
+        else 
+            fileUrl = e.state.stateFileUrl;
+
+        fileName = getFileFromUrl(fileUrl);
+        sessionStorage.setItem("refreshUrl", fileUrl);
+        $("#wrapper").load(fileUrl);
         updateActive(fileName);
     }
     catch (error){
