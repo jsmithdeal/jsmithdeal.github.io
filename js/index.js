@@ -32,7 +32,7 @@ $(document).ready(function(){
 function navigate(fileUrl) {
     try {
         var nav = $("#navbarNav");
-        var fileName = fileUrl.replace("html/", "").replace(".html", "");
+        var fileName = getFileFromUrl(fileUrl);
 
         sessionStorage.setItem("refreshUrl", fileUrl);
 
@@ -106,12 +106,26 @@ function updateActive(fileName) {
     }
 }
 
+//Helper to get the file name from file url
+function getFileFromUrl(fileUrl){
+    try {
+        if (fileUrl != null && fileUrl != ""){
+            return fileUrl.replace("html/", "").replace(".html", "");
+        }
+    }
+    catch (error){
+        console.log(error);
+    }
+}
+
 //Handles loading correct html on back/forward click
 window.onpopstate = function (e) {
     try {
+        var fileName = getFileFromUrl(e.state.stateFileUrl);
+
         sessionStorage.setItem("refreshUrl", e.state.stateFileUrl);
         $("#wrapper").load(e.state.stateFileUrl);
-        updateActive(e.state.stateFileUrl);
+        updateActive(fileName);
     }
     catch (error){
         console.log(error);
