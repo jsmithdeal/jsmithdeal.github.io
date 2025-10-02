@@ -51,7 +51,7 @@ function navigate(fileUrl) {
             $(".navbar-toggler-icon").css("background-image", "url(images/hamburger.svg)");
         }
 
-        track(fileName);
+        //track(fileName);
         updateActive(fileName);
     }
     catch (error){
